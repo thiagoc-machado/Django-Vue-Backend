@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-RUN python manage.py collectstatic --noinput
+# RUN python manage.py collectstatic --noinput
 RUN python manage.py migrate
 
 CMD ["gunicorn", "tienda.wsgi:application"]
